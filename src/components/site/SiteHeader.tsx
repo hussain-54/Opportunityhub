@@ -84,13 +84,7 @@ export function SiteHeader() {
                 {n.label}
               </Link>
             ))}
-            <Link
-              to="/submit"
-              onClick={() => setOpen(false)}
-              className="mt-2 inline-flex justify-center bg-navy px-5 py-3 text-xs font-mono font-bold uppercase tracking-wider text-white"
-            >
-              Submit Opportunity
-            </Link>
+         
           </div>
         </div>
       )}
