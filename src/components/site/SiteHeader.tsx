@@ -2,7 +2,6 @@ import { Link } from "@tanstack/react-router";
 import { Menu, Search, Shield, X } from "lucide-react";
 import { useState } from "react";
 import { useAuth } from "@/lib/use-auth";
-
 const nav = [
   { to: "/opportunities", label: "Opportunities" },
   { to: "/category/scholarships", label: "Scholarships" },
@@ -11,7 +10,6 @@ const nav = [
   { to: "/category/accelerators", label: "Accelerators" },
   { to: "/blog", label: "Journal" },
 ];
-
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const { isAdmin } = useAuth();
@@ -35,7 +33,6 @@ export function SiteHeader() {
             ))}
           </nav>
         </div>
-
         <div className="flex items-center gap-2">
           <Link
             to="/opportunities"
@@ -54,12 +51,6 @@ export function SiteHeader() {
               <Shield className="h-4 w-4" />
             </Link>
           )}
-          <Link
-            to="/submit"
-            className="hidden sm:inline-flex items-center bg-navy px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider text-white hover:bg-orange transition-colors"
-          >
-            Submit
-          </Link>
           <button
             type="button"
             aria-label="Toggle menu"
@@ -70,7 +61,6 @@ export function SiteHeader() {
           </button>
         </div>
       </div>
-
       {open && (
         <div className="lg:hidden border-t border-rule bg-paper">
           <div className="container-prose flex flex-col py-4 gap-3">
